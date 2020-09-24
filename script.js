@@ -1,27 +1,29 @@
 $(document).ready(function () {
-    $.getJSON('sliderr.json', function (data) {
-        $("img").eq(0).attr("src", "img/" + data.slider[0].image);
-        $("img").eq(1).attr("src", "img/" + data.slider[1].image);
-        $("img").eq(2).attr("src", "img/" + data.slider[2].image);
-        $("img").eq(3).attr("src", "img/" + data.slider[3].image);
-        $("img").eq(4).attr("src", "img/" + data.slider[4].image);
+    $.getJSON('sliderr.json', function (data) { // get AJAX/JSON
+        for (i = 0; i <= 4; i++) { // starting img src
+            $("img").eq(i).attr("src", "img/" + data.slider[i].image);
+        }
 
-        $("h1").text(data.slider[0].text.h1);
-        $("p").text(data.slider[0].text.p);
+        for (i = 0; i <= 4; i++) { // img src
+            $("a").eq(i).attr("href", data.slider[i].url);
+        }
 
-        let img1Pos = 0;
+        $("h1").text(data.slider[0].text.h1); // h1 starting text
+        $("p").text(data.slider[0].text.p); // p starting text
+
+        let img1Pos = 0; // img starting pos
         let img2Pos = 100;
         let img3Pos = 200;
         let img4Pos = 300;
         let img5Pos = 400;
 
-        $("img").eq(0).css({ "left": img1Pos + "%" });
+        $("img").eq(0).css({ "left": img1Pos + "%" }); 
         $("img").eq(1).css({ "left": img2Pos + "%" });
         $("img").eq(2).css({ "left": img3Pos + "%" });
         $("img").eq(3).css({ "left": img4Pos + "%" });
         $("img").eq(4).css({ "left": img5Pos + "%" });
 
-        $(".fa-angle-left").click(function () {
+        $(".fa-angle-left").click(function () { // left func
             img1Pos += 100;
             img2Pos += 100;
             img3Pos += 100;
@@ -68,7 +70,7 @@ $(document).ready(function () {
             }
         });
 
-        $(".fa-angle-right").click(function () {
+        $(".fa-angle-right").click(function () { // right func
             img1Pos -= 100;
             img2Pos -= 100;
             img3Pos -= 100;
