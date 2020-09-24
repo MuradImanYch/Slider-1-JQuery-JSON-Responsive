@@ -1,0 +1,13 @@
+1- Ансар Али Юсиф
+2- Гумбатов Эльчин Тахир
+3- Еремеев Александр Анатольевич
+4- Иманов Мурад Халиг
+5- Керимова Эсмира Мурад
+1- Мамедова Нурана Джаваншир
+3- Фазлиахмедов Чингиз Ильхам
+5- Ягубова Миная Эмин
+
+Tapshiriq:
+1- Dizayn responsiv olmalidir, hem desktopda hem mobilde yerleshmelidir ve ishlemelidir
+2- JavaScript ya da jQuery istifade oluna biler
+3- Slaydlarin shekilleri, basliqlari, metnleri ve kecidleri JSON-dan AJAX ile goturulmelidir
